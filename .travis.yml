@@ -1,0 +1,16 @@
+language: python
+python:
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+install: "pip install -r requirements.txt"
+before_script:
+  - neobox install test community 2.1.8
+  - neobox start test
+  - export NEO4J_URI="http://localhost:47470/db/data/"
+script: nosetests
+after_script:
+  - neobox stop test
+  - neobox drop test
+  - neobox remove test

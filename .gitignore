@@ -1,0 +1,8 @@
+neoconf
+*.*swp
+*.pyc
+env
+env3
+
+# Pycharm IDE settings
+.idea
